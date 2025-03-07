@@ -3,10 +3,15 @@ package com.dcoders.myfirstapp
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ArrowDropDown
+import androidx.compose.material3.Button
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Surface
@@ -35,15 +40,26 @@ class MainActivity : ComponentActivity() {
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun UnitConverterUi(){
+fun UnitConverterUi() {
     Column {
         Text(text = "Unit Converter")
         OutlinedTextField(value = "", onValueChange = {})
         Row {
-
+            Box {
+                Button(onClick = { /*TODO*/ }) {
+                    Text(text = "Select")
+                    Icon(Icons.Default.ArrowDropDown,contentDescription = "")
+                }
+            }
+            Box {
+                Button(onClick = { /*TODO*/ }) {
+                    Text(text = "Select")
+                    Icon(Icons.Default.ArrowDropDown,contentDescription = "")
+                }
+            }
 
         }
-        Text(text ="Result")
+        Text(text = "Result")
     }
 }
 
